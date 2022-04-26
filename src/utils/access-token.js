@@ -41,7 +41,10 @@ export class AccessToken {
   }
 }
 
+const {private_key}= JSON.parse(process.env.JWT_PRIVATE_KEY)
+const {public_key}= JSON.parse(process.env.JWT_PUBLIC_KEY) 
+
 export const accessToken = new AccessToken(
-  process.env.JWT_PRIVATE_KEY,
-  process.env.JWT_PUBLIC_KEY
+  private_key,
+  public_key
 )
