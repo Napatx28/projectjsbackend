@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongo:5.0.6
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=libary
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./volumes/mongo:/data/db
+    

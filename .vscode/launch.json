@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch",
+      "skipFiles": ["<node_internals>/**"],
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/node_modules/nodemon/bin/nodemon.js",
+      "args": ["src/index.js"],
+      "console": "integratedTerminal",
+      "protocol": "inspector",
+      "env": {
+        "MONGO_URI": "mongodb://localhost:27017/libary",
+        "PORT": "4000",
+        "JWT_PRIVATE_KEY": "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIFqLFRYqYTurQy06FhCOzKE9ai7Wb/A/ciCxb/BmqhOXoAoGCCqGSM49\nAwEHoUQDQgAEMBgul03EbxpE1giYUH/VJzq0psF/zhxRbnwvlr9DhQInEiA1OQRO\nlfRJlKqJh0QLTRjdQDA+nPTOjcsmmqIeFg==\n-----END EC PRIVATE KEY-----",
+        "JWT_PUBLIC_KEY": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMBgul03EbxpE1giYUH/VJzq0psF/\nzhxRbnwvlr9DhQInEiA1OQROlfRJlKqJh0QLTRjdQDA+nPTOjcsmmqIeFg==\n-----END PUBLIC KEY-----"
+      },
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
